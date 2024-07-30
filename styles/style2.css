@@ -1,0 +1,52 @@
+body{
+    background-image: linear-gradient(to right, #97ff67, #b4b4b4); 
+    text-align: center;
+    margin-top: 50px;
+    color: #50270280;
+}
+#telefone{
+    width: 379px;
+    height: 20px;
+    border-radius: 99px;
+    border: none;
+}
+#telefone::placeholder{
+    text-align: center;
+}
+#cep{
+    width: 379px;
+    height: 20px;
+    border-radius: 99px;
+    border: none;
+}
+#cep::placeholder{
+    text-align: center;
+}
+#endereco{
+    width: 379px;
+    height: 20px;
+    border-radius: 99px;
+    border: none;
+}
+#valor{
+    width: 379px;
+    height: 20px;
+    border-radius: 99px;
+    border: none;
+}
+#botao{
+    width: 379px;
+    background-color: blue;
+    color:beige;
+    cursor: pointer;
+    border:none;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 99px;
+    height: 20px;
+}
+#observacao{
+    border-radius: 5px;
+    border:none;
+    resize: vertical;
+}
+

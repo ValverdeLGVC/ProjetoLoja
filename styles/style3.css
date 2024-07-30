@@ -1,0 +1,14 @@
+body{
+    background-image: linear-gradient(to right, #afafae, #435aa5);
+    color:white;
+}
+#centro{
+    text-align: center;
+    margin-top: 200px;
+}
+#testejavaS{
+    text-align: center;
+}
+.bill{
+    text-align: center;
+}

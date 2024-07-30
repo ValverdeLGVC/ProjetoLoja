@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VALVERDE Store</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="header-inner-content show-menu">
+            <h1 class="logo">VALVERDE <span>Store</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" target="_blank" style="text-decoration: none; color: white;">Home</a></li>
+
+                    <li><a href="https://valverdelgvc.github.io/pt/indexContato.html" target="_blank" style="text-decoration: none; color: white;">Contato</a></li>
+
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="interface.png" class="menu-button">
+                <span class="cart-icon-container">
+                    <button onclick="exibirQuadrado()" class="btn btn-outline-light btn-cart" id="cc"
+                        data-toggle="modal" data-target="#cartModal">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="quantidadeCarrinho">0</span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <header>
+
+        <div class="header-inner-content">
+
+            <div class="header-bottom-side">
+
+                <div class="header-bottom-side-left" style="margin-right: 35px;">
+                    <h2>Dê Um Novo Estilo ao Seu Expediente!!!</h2>
+                    <p>Sucesso nem sempre tem a ver com grandeza. Tem a ver com consistência e planejamento.<br>
+                        E para poder planejar suas metas com eficiência, esteja bem emocionalmente com seus lanchinhos
+                        no expediente!!!<br>
+                    </p>
+                    <button class="botao" margin-top: 12px;>Ver Agora &#8594;</button>
+
+                </div>
+                <div class="header-bottom-side-right">
+
+                    <img style="border-radius: 5px;" src="pexels-marta-dzedyshko-1042863-2067420.jpg" alt="">
+                    <div class="quadrado" id="box">
+                        <button onclick="fecharQuadrado()" class="fechec" style="padding: 0px;">X</button>
+                        <div id="valorContainer"></div>
+                        <div id="totalContainer"></div>
+                        <button id="finalizarCompraBtn"><a href="" target="_blank"
+                                style="text-decoration: none; color: white;">Pedir Trufas</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="gray-background">
+            <div class="page-inner-content">
+                <div style="display: grid;
+                padding: 4rem 1rem;
+                grid-template-columns: repeat(2,1fr);
+                gap: 3rem;
+                align-items: center;
+                justify-content: space-evenly;
+                " class="cols-3">
+
+                    <div class="loader">
+                        <div class="pac-man"></div>
+                        <div class="point p1"></div>
+                        <div class="point p2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="page-inner-content">
+                <h3 class="section-title">Trufa - M</h3>
+                <div class="subtitle-underline"></div>
+                <div class="cols-4">
+                    <!--Inicio dos meus ítens 1-->
+                    <div class="product">
+                        <img style="width:70% ; height: 70%;"
+                            src="Imagem do WhatsApp de 2024-07-22 à(s) 08.41.23_6ea15476.jpg" alt="">
+                        <P class="product-name">Trufa de Morango</P>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <p class="product-price">3,50<span>R$</span></p>
+                        <button onclick="mostrarValores()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                            Carrinho</button>
+
+                    </div>
+                    <div class="product">
+                        <img style="width:70% ; height: 70%;"
+                            src="Imagem do WhatsApp de 2024-07-22 à(s) 14.37.53_1b7fb2ad.jpg" alt="">
+                        <P class="product-name">Trufa de Ninho</P>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <p class="product-price">3,50<span>R$</span></p>
+                        <button onclick="mostrarValores2()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <div class="product">
+                        <img style="width:70% ; height: 70%;" src="briga.jpg" alt="">
+                        <P class="product-name">Trufa de Brigadeiro</P>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <p class="product-price">3,50<span>R$</span></p>
+                        <button onclick="mostrarValores3()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <div class="product">
+                        <img style="width:70% ; height: 70%;" src="maracuja.jpeg" alt="">
+                        <P class="product-name">Trufa de Maracuja</P>
+                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                        <p class="product-price">3,50<span>R$</span></p>
+                        <button onclick="mostrarValores4()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                    <!--Final dos meus ítens 1-->
+                </div>
+
+            </div>
+            <div>
+                <div class="page-inner-content">
+                    <h3 class="section-title">Trufa - G</h3>
+                    <div class="subtitle-underline"></div>
+                    <div class="cols-4">
+                        <!--Inicio dos meus ítens 2-->
+                        <div class="product">
+                            <img style="width:70% ; height: 70%;" src="maracuja.jpeg" alt="">
+                            <P class="product-name">Trufa de Maracuja</P>
+                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                            <p class="product-price">4,25<span>R$</span></p>
+                            <button onclick="mostrarValores5()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                                Carrinho</button>
+                        </div>
+                        <div class="product">
+                            <img style="width:70% ; height: 70%;" src="briga.jpg" alt="">
+                            <P class="product-name">Trufa de Brigadeiro</P>
+                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                            <p class="product-price">4,25<span>R$</span></p>
+                            <button onclick="mostrarValores6()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                                Carrinho</button>
+                        </div>
+                        <div class="product">
+                            <img style="width:70% ; height: 70%;"
+                                src="Imagem do WhatsApp de 2024-07-22 à(s) 14.37.53_1b7fb2ad.jpg" alt="">
+                            <P class="product-name">Trufa de Ninho</P>
+                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                            <p class="product-price">4,25<span>R$</span></p>
+                            <button onclick="mostrarValores7()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                                Carrinho</button>
+                        </div>
+                        <div class="product">
+                            <img style="width:70% ; height: 70%;"
+                                src="Imagem do WhatsApp de 2024-07-22 à(s) 08.41.23_6ea15476.jpg" alt="">
+                            <P class="product-name">Trufa de Morango</P>
+                            <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                            <p class="product-price">4,25<span>R$</span></p>
+                            <button onclick="mostrarValores8()" class="btn btn-success btn-add-to-cart">Adicionar ao
+                                Carrinho</button>
+                        </div>
+                        <!--Final dos meus ítens 2-->
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <p style="margin-top: 69px;">&copy; VALVERDE Store Seu Site de Lanches</p>
+        <div class="social-icons">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    </div>
+
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menuButton = document.querySelector(".menu-button");
+
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle("show-menu");
+        });
+
+        //Início do código responsável por abrir carrino e fachar o carrinho.
+        function fecharQuadrado() {
+            var quadrado = document.getElementById('box');
+            quadrado.style.display = 'none';
+
+        }
+
+        function exibirQuadrado() {
+            var quadrado = document.getElementById('box');
+            quadrado.style.display = 'block';
+        }
+        //Fim do código responsável por abrir carrino e fachar o carrinho.
+
+        var valores = [];
+        var imagens = [];
+
+        /*
+            
+    <a href="" target="_blank" id="whatsappLink">Enviar mensagem:</a>
+    <script>
+        function api() {
+            var msg = "Stéffanie";
+            var message = "Olá, me chamo: " + msg;
+            var phoneNumber = "5564992142391";
+            var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            document.getElementById("whatsappLink").href = whatsappURL;
+        }
+
+        Chama a função api para gerar o link do WhatsApp
+        api();
+    
+
+        */
+
+        function mostrarValores() {
+            var valor1 = 3.50;
+            var imagem1 = "Imagem do WhatsApp de 2024-07-22 à(s) 08.41.23_6ea15476.jpg";
+            adicionarValor(valor1, imagem1);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function mostrarValores2() {
+            var valor2 = 3.50;
+            var imagem2 = "Imagem do WhatsApp de 2024-07-22 à(s) 14.37.53_1b7fb2ad.jpg";
+            adicionarValor(valor2, imagem2);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function mostrarValores3() {
+            var valor3 = 3.50;
+            var imagem3 = "briga.jpg";
+            adicionarValor(valor3, imagem3);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function mostrarValores4() {
+            var valor4 = 3.50;
+            var imagem4 = "maracuja.jpeg";
+            adicionarValor(valor4, imagem4);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function mostrarValores5() {
+            var valor5 = 4.25;
+            var imagem5 = "maracuja.jpeg";
+            adicionarValor(valor5, imagem5);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function mostrarValores6() {
+            var valor6 = 4.25;
+            var imagem6 = "briga.jpg";
+            adicionarValor(valor6, imagem6);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function mostrarValores7() {
+            var valor7 = 4.25;
+            var imagem7 = "Imagem do WhatsApp de 2024-07-22 à(s) 14.37.53_1b7fb2ad.jpg";
+            adicionarValor(valor7, imagem7);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function mostrarValores8() {
+            var valor8 = 4.25;
+            var imagem8 = "Imagem do WhatsApp de 2024-07-22 à(s) 08.41.23_6ea15476.jpg";
+            adicionarValor(valor8, imagem8);
+            adicionarMercadoria('Combo trufado');
+        }
+
+        function adicionarValor(valor, urlImagem) {
+            valores.push(valor);
+            imagens.push(urlImagem);
+            atualizarValores();
+        }
+
+        function removerValor(index) {
+            var valorRemovido = valores[index];
+            valores.splice(index, 1);
+            imagens.splice(index, 1);
+            atualizarValores();
+            removerMercadoria('Combo trufado');
+        }
+
+        function removerMercadoria(nomeMercadoria) {
+            quantidadesNoCarrinho[nomeMercadoria] = Math.max((quantidadesNoCarrinho[nomeMercadoria] || 0) - 1, 0);
+            atualizarQuantidadeNoCarrinho();
+        }
+
+        function calcularTotal() {
+            var total = valores.reduce(function (acc, valor) {
+                return acc + valor;
+            }, 0);
+            return total.toFixed(2);
+        }
+
+        function atualizarValores() {
+            var outputDiv = document.getElementById('valorContainer');
+            var totalDiv = document.getElementById('totalContainer');
+
+            outputDiv.innerHTML = ""; // Limpa a div antes de adicionar os novos valores
+
+            for (var i = 0; i < valores.length; i++) {
+                var valorItem = document.createElement('div');
+                valorItem.classList.add('valorItem');
+                var valorTexto = document.createElement('p');
+                valorTexto.textContent = valores[i];
+                valorTexto.style.marginLeft = '-105px';
+                var imagemItem = document.createElement('img');
+                imagemItem.src = imagens[i];
+                imagemItem.style.width = '50px';
+                var removerBotao = document.createElement('button');
+                removerBotao.textContent = 'Excluir';
+                removerBotao.className = 'remover-botao';
+                removerBotao.style.marginTop = '20px';
+                removerBotao.style.width = '65px';
+                removerBotao.onclick = function (index) {
+                    return function () {
+                        removerValor(index);
+                    };
+                }(i);
+                valorItem.appendChild(imagemItem);
+                valorItem.appendChild(valorTexto);
+                valorItem.appendChild(removerBotao);
+                outputDiv.appendChild(valorItem);
+            }
+            totalDiv.textContent = "Total: R$ " + calcularTotal();
+        }
+
+        //teste
+        var quantidadesNoCarrinho = {};
+
+        function adicionarMercadoria(nomeMercadoria) {
+            quantidadesNoCarrinho[nomeMercadoria] = (quantidadesNoCarrinho[nomeMercadoria] || 0) + 1;
+            atualizarQuantidadeNoCarrinho();
+        }
+
+        function atualizarQuantidadeNoCarrinho() {
+            var quantidadeSpan = document.getElementById('quantidadeCarrinho');
+            var totalQuantidades = Object.values(quantidadesNoCarrinho).reduce((total, quantidade) => total + quantidade, 0);
+            quantidadeSpan.textContent = totalQuantidades;
+        }
+        var quantidadesNoCarrinho = {};
+
+        // Função para finalizar a compra
+        function finalizarCompra() {
+            var resumoCompra = "Já Conferi o Valor Que Dará Minhas Trufas, Quero as Trufas de:\n";
+            for (var mercadoria in quantidadesNoCarrinho) {
+                if (quantidadesNoCarrinho[mercadoria] > 0) {
+                    resumoCompra += mercadoria + ": " + quantidadesNoCarrinho[mercadoria] + " unidades\n";
+                }
+            }
+            resumoCompra += "Total: R$ " + calcularTotal();
+            var whatsappURL = "https://wa.me/5564992142391?text=" + encodeURIComponent(resumoCompra);
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Adicionar evento ao botão de finalizar compra
+        document.getElementById('finalizarCompraBtn').addEventListener('click', finalizarCompra);
+
+        // Função para atualizar a exibição dos valores (caso necessário)
+        // function mostrarValores() { ... }
+        // function mostrarValores2() { ... }
+        // function mostrarValores3() { ... }
+
+        window.onload = function () {
+            // Inicia o carrinho vazio
+            quantidadesNoCarrinho = {};
+            // Se você precisar inicializar algo na interface, pode fazer aqui
+        };
+    </script>
+    <!--background-image: radial-gradient(#97ff67, #b4b4b4);  comando em css para deixa a página com duas cores-->
+</body>
+
+</html>
