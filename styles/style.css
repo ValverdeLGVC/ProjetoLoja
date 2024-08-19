@@ -9,8 +9,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
-
+    
 }
 
 .header-inner-content {
@@ -20,7 +19,8 @@ body {
 }
 
 .navbar {
-    background-color: rgb(199, 140, 31);
+    background-color: rgb(33, 24, 78);
+    /* cor extraterrestre */
     padding: 1rem;
     position: sticky;
     top: 0;
@@ -36,8 +36,8 @@ body {
 }
 
 .logo {
-    color: green;
-
+    color: #aaffcc;
+    
 }
 
 .logo span {
@@ -68,12 +68,13 @@ nav ul li {
     color: white;
     margin-right: 1.5rem;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 nav ul li:hover {
-    transform: translateY(-5px);
-    transition: all 0.2s;
-    font-weight: bold;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+    color: #aaffcc;
 }
 
 .menu-button {
@@ -90,8 +91,6 @@ nav ul li:hover {
 .header-bottom-side-left {
     height: 100%;
     flex-basis: 50%;
-
-
 }
 
 .header-bottom-side-right {
@@ -99,43 +98,87 @@ nav ul li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 button {
     border: none;
     padding: 10px;
-    background-color: rgb(138, 83, 0);
+    background-color: rgb(55, 22, 120); /* cor espacial */
     color: white;
     border-radius: 9999px;
     cursor: pointer;
     transition: 0.5s;
     width: 149px;
+    position: relative;
+    overflow: hidden;
+}
 
+/* Remover este bloco para eliminar o efeito oval */
+button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+button:hover::before {
+    top: 150%;
+    left: 150%;
+}
+
+.pac-man-eye {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+}
+
+.pac-man-mouth {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #1a0048;
+    /* Cor do espaço */
 }
 
 button:hover {
-    background-color: green;
+    background-color: rgb(12, 48, 90);
+    /* tom mais escuro para o hover */
 }
 
 .header-bottom-side-left h2 {
     font-size: 2.7rem;
     margin-bottom: 1.5rem;
-
+    color: #ffcccc;
 }
 
 .header-bottom-side-left p {
     line-height: 1.5rem;
     margin-bottom: 1.5rem;
+    color: #ffcccc;
 }
 
+
 header {
-    background-image: radial-gradient(#fff, #c7c7c7);
+    background-image: radial-gradient(#700145, #152655);
+    /* gradiente mais espacial */
 }
+
 
 @media (max-width: 800px) {
     .logo {
-        font-size: 1.rem;
+        font-size: 1rem;
     }
 
     .menu-button {
@@ -154,7 +197,7 @@ header {
 
     nav {
         position: absolute;
-        background-color: rgb(199, 140, 31);
+        background-color: rgb(33, 24, 78);
         width: 100%;
         top: 46px;
         display: none;
@@ -171,16 +214,14 @@ header {
     nav ul li {
         text-align: center;
         padding: 0.8rem;
-
     }
-
 }
 
 .gray-background {
-    background-color: rgb(199, 140, 31);
-
-
+    background: radial-gradient(circle, #003f5c, #002a3e, #001c2b);
+    /* Gradiente espacial com tons escuros e misteriosos */
 }
+
 
 .page-inner-content {
     max-width: 1150px;
@@ -214,14 +255,15 @@ header {
 .subtitle-underline {
     width: 100px;
     height: 5px;
-    background: rgb(116, 66, 0);
+    background: rgb(31, 5, 80);
     border-radius: 9999px;
     margin: 8px auto 0 auto;
     margin-bottom: 20px;
 }
 
 main {
-    background-image: radial-gradient(#97ff67, #b4b4b4);
+    background-image: radial-gradient(circle, #63446d, #917bb8, #634f91);
+    /* Gradiente espacial com tons de roxo, azul escuro e roxo brilhante */
 }
 
 .product {
@@ -246,14 +288,53 @@ main {
 }
 
 footer {
-    background: radial-gradient(#97ff67, #b4b4b4);
-    color: #a15c01;
-    padding: 20px;
-    text-align: center;
+    background: radial-gradient(circle, #1a0048, #000000); /* Gradiente espacial escuro */
+    color: #aaffcc; /* Cor clara para contraste com o fundo escuro */
+    padding: 2rem; /* Aumente o padding para mais espaço */
+    text-align: center; /* Centralize o texto */
+    position: relative; /* Para garantir que o footer se posicione corretamente */
+    z-index: 10; /* Para garantir que o footer fique acima de outros elementos, se necessário */
 }
 
 footer p {
     margin: 0;
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte para melhor legibilidade */
+}
+
+.footer-social-icons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social-icons a {
+    display: inline-block;
+    margin: 0 1rem;
+    color: #aaffcc;
+    font-size: 1.5rem; /* Aumente o tamanho dos ícones para destacá-los */
+    transition: color 0.3s ease, transform 0.3s ease; /* Adicione uma transição suave */
+}
+
+.footer-social-icons a:hover {
+    color: #ffcc00; /* Cor de destaque ao passar o mouse */
+    transform: scale(1.2); /* Efeito de aumento ao passar o mouse */
+}
+
+.footer-credit {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #ffcccc; /* Cor clara para a mensagem de crédito */
+}
+
+
+@keyframes footerGlow {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
 }
 
 .social-icons {
@@ -263,7 +344,7 @@ footer p {
 .social-icons a {
     display: inline-block;
     margin: 0 10px;
-    color: #a15c01;
+    color: #db8205;
     text-decoration: none;
     font-size: 20px;
 
@@ -365,6 +446,7 @@ footer p {
     align-items: center;
 }
 
+
 .fechec:hover {
     background-color: darkred;
 }
@@ -389,7 +471,6 @@ footer p {
     transition: background-color 0.3s ease;
     /* Transição suave de cor de fundo */
 }
-
 .remover-botao:hover {
     background-color: darkred;
     /* Cor de fundo mais escura quando passar o mouse */
@@ -400,26 +481,105 @@ footer p {
     justify-content: space-between;
 }
 
+#pacman {
+    width: 100%;
+    height: auto;
+    background: #aaffcc;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.pac-man-background {
+    background-image: radial-gradient(circle, #220663, #180e29, #7811b8);
+    /* Gradiente espacial para o fundo do Pac-Man */
+    border: 3px solid #aaffcc;
+    /* Cor platinada para o Pac-Man */
+    border-radius: 50%;
+}
+
 .pac-man {
     width: 5em;
     aspect-ratio: 1;
     border-radius: 50%;
     background: radial-gradient(farthest-side, #000 98%, #0000) 1.7em 0.61em/.8em .8em no-repeat,
-        #ffcc00;
+        #c0c0c0;
+    /* Pac-Man platinado prata */
     box-shadow: .2em -.6em 1.2em 0em inset rgba(0, 0, 0, 0.7);
     animation: l4 .5s infinite steps(5) alternate;
     z-index: 1;
 }
 
-.point {
-    margin-top: 2em;
-    position: absolute;
-    margin-left: .4em;
-    width: 1em;
-    height: 1em;
-    background-color: #000;
-    border-radius: 50%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ffffff;
+    /* Cor clara para combinar com o tema espacial */
+    position: relative;
+    font-size: 2rem;
+    /* Ajuste o tamanho conforme necessário */
 }
+
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    /* Aura clara ao redor do texto */
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    /* Brilho suave */
+    animation: auraAnimation 2s infinite alternate;
+}
+
+@keyframes auraAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, #6e00b1, #0f0033);
+    /* Gradiente espacial */
+    margin: 2rem 0;
+}
+
+.point {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    background: radial-gradient(circle, #e5ff00, #ffc400);
+    /* Gradiente verde neon */
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+    /* Efeito de brilho neon */
+    transform: translateY(1.5em);
+    /* Ajuste para descer mais */
+}
+
+
+
 
 .p1 {
     margin-left: 8em;
