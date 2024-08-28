@@ -213,67 +213,77 @@
 
         var valores = [];
         var imagens = [];
+        var nome = [];
 
         // Funções para adicionar valores e mercadorias
         function mostrarValores() {
             var valor1 = 3.50;
             var imagem1 = "Imagem do WhatsApp de 2024-07-22 à(s) 08.41.23_6ea15476.jpg";
-            adicionarValor(valor1, imagem1);
+            var nome1 = "Morango"
+            adicionarValor(valor1, imagem1, nome1);
             adicionarMercadoria('Combo trufado');
         }
 
         function mostrarValores2() {
             var valor2 = 3.50;
             var imagem2 = "Imagem do WhatsApp de 2024-07-22 à(s) 14.37.53_1b7fb2ad.jpg";
-            adicionarValor(valor2, imagem2);
+            var nome2 = "Ninho"
+            adicionarValor(valor2, imagem2, nome2);
             adicionarMercadoria('Combo trufado');
         }
 
         function mostrarValores3() {
             var valor3 = 3.50;
             var imagem3 = "briga.jpg";
-            adicionarValor(valor3, imagem3);
+            var nome3 = "Brigadeiro"
+            adicionarValor(valor3, imagem3, nome3);
             adicionarMercadoria('Combo trufado');
         }
 
         function mostrarValores4() {
             var valor4 = 3.50;
             var imagem4 = "maracuja.jpeg";
-            adicionarValor(valor4, imagem4);
+            var nome4 = "Maracuja"
+            adicionarValor(valor4, imagem4, nome4);
             adicionarMercadoria('Combo trufado');
         }
 
         function mostrarValores5() {
             var valor5 = 4.25;
             var imagem5 = "maracuja.jpeg";
-            adicionarValor(valor5, imagem5);
+            var nome5 = "Maracuja G"
+            adicionarValor(valor5, imagem5, nome5);
             adicionarMercadoria('Combo trufado');
         }
 
         function mostrarValores6() {
             var valor6 = 4.25;
             var imagem6 = "briga.jpg";
-            adicionarValor(valor6, imagem6);
+            var nome6 = "Brigadeiro G"
+            adicionarValor(valor6, imagem6, nome6);
             adicionarMercadoria('Combo trufado');
         }
 
         function mostrarValores7() {
             var valor7 = 4.25;
             var imagem7 = "Imagem do WhatsApp de 2024-07-22 à(s) 14.37.53_1b7fb2ad.jpg";
-            adicionarValor(valor7, imagem7);
+            var nome7 = "Ninho G"
+            adicionarValor(valor7, imagem7, nome7);
             adicionarMercadoria('Combo trufado');
         }
 
         function mostrarValores8() {
             var valor8 = 4.25;
             var imagem8 = "Imagem do WhatsApp de 2024-07-22 à(s) 08.41.23_6ea15476.jpg";
-            adicionarValor(valor8, imagem8);
+            var nome8 = "Morango G"
+            adicionarValor(valor8, imagem8, nome8);
             adicionarMercadoria('Combo trufado');
         }
 
-        function adicionarValor(valor, urlImagem) {
+        function adicionarValor(valor, urlImagem, nomeTrufa) {
             valores.push(valor);
             imagens.push(urlImagem);
+            nome.push(nomeTrufa);
             atualizarValores();
         }
 
@@ -281,6 +291,8 @@
             var valorRemovido = valores[index];
             valores.splice(index, 1);
             imagens.splice(index, 1);
+            nome.splice(index, 1);
+
             atualizarValores();
             removerMercadoria('Combo trufado');
         }
@@ -356,9 +368,8 @@
             resumoCompra += `\nTotal: R$ ${calcularTotal()}\n\n`;
             resumoCompra += "Aqui estão as trufas selecionadas:\n";
 
-            for (var i = 0; i < imagens.length; i++) {
-                resumoCompra += `\u{1F5BC} Trufa ${i + 1}: ${imagens[i]}\n`;
-
+            for (var i = 0; i < nome.length; i++) {
+                resumoCompra += `\u{1F5BC} Trufa ${i + 1}: ${nome[i]}\n`;
             }
 
             var whatsappURL = "https://wa.me/5564992142391?text=" + encodeURIComponent(resumoCompra);
@@ -374,6 +385,7 @@
             // Se você precisar inicializar algo na interface, pode fazer aqui
         };
     </script>
+
 
     <!--background-image: radial-gradient(#97ff67, #b4b4b4);  comando em css para deixa a página com duas cores-->
 </body>
