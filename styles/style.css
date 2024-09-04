@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
+
 }
 
 .header-inner-content {
@@ -36,12 +39,28 @@ body {
 }
 
 .logo {
-    color: #aaffcc;
-    
+    font-family: 'Pacifico', cursive;
+    /* Fonte cursiva e divertida */
+    font-size: 3em;
+    /* Tamanho grande para chamar atenção */
+    color: #2157a8;
+    /* Cor rosa forte para o texto */
+    text-shadow: 3px 3px 5px rgba(9, 22, 95, 0.7);
+    /* Sombra para efeito de destaque */
+    margin: 0;
+    letter-spacing: 2px;
+    /* Espaçamento entre letras */
 }
 
 .logo span {
-    color: white;
+    font-family: 'Raleway', sans-serif;
+    /* Fonte mais simples e elegante para o subtítulo */
+    font-size: 0.8em;
+    /* Tamanho menor para o subtítulo */
+    color: #6486a1;
+    /* Cor rosa escuro para o texto adicional */
+    text-shadow: 1px 1px 3px rgba(149, 123, 221, 0.5);
+    /* Sombra sutil para o subtítulo */
 }
 
 nav ul {
@@ -103,7 +122,8 @@ nav ul li:hover {
 button {
     border: none;
     padding: 10px;
-    background-color: rgb(55, 22, 120); /* cor espacial */
+    background-color: rgb(55, 22, 120);
+    /* cor espacial */
     color: white;
     border-radius: 9999px;
     cursor: pointer;
@@ -288,17 +308,24 @@ main {
 }
 
 footer {
-    background: radial-gradient(circle, #1a0048, #000000); /* Gradiente espacial escuro */
-    color: #aaffcc; /* Cor clara para contraste com o fundo escuro */
-    padding: 2rem; /* Aumente o padding para mais espaço */
-    text-align: center; /* Centralize o texto */
-    position: relative; /* Para garantir que o footer se posicione corretamente */
-    z-index: 10; /* Para garantir que o footer fique acima de outros elementos, se necessário */
+    background: radial-gradient(circle, #1a0048, #000000);
+    /* Gradiente espacial escuro */
+    color: #aaffcc;
+    /* Cor clara para contraste com o fundo escuro */
+    padding: 2rem;
+    /* Aumente o padding para mais espaço */
+    text-align: center;
+    /* Centralize o texto */
+    position: relative;
+    /* Para garantir que o footer se posicione corretamente */
+    z-index: 10;
+    /* Para garantir que o footer fique acima de outros elementos, se necessário */
 }
 
 footer p {
     margin: 0;
-    font-size: 1.2rem; /* Ajuste o tamanho da fonte para melhor legibilidade */
+    font-size: 1.2rem;
+    /* Ajuste o tamanho da fonte para melhor legibilidade */
 }
 
 .footer-social-icons {
@@ -311,19 +338,24 @@ footer p {
     display: inline-block;
     margin: 0 1rem;
     color: #aaffcc;
-    font-size: 1.5rem; /* Aumente o tamanho dos ícones para destacá-los */
-    transition: color 0.3s ease, transform 0.3s ease; /* Adicione uma transição suave */
+    font-size: 1.5rem;
+    /* Aumente o tamanho dos ícones para destacá-los */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Adicione uma transição suave */
 }
 
 .footer-social-icons a:hover {
-    color: #ffcc00; /* Cor de destaque ao passar o mouse */
-    transform: scale(1.2); /* Efeito de aumento ao passar o mouse */
+    color: #ffcc00;
+    /* Cor de destaque ao passar o mouse */
+    transform: scale(1.2);
+    /* Efeito de aumento ao passar o mouse */
 }
 
 .footer-credit {
     margin-top: 2rem;
     font-size: 1rem;
-    color: #ffcccc; /* Cor clara para a mensagem de crédito */
+    color: #ffcccc;
+    /* Cor clara para a mensagem de crédito */
 }
 
 
@@ -471,6 +503,7 @@ footer p {
     transition: background-color 0.3s ease;
     /* Transição suave de cor de fundo */
 }
+
 .remover-botao:hover {
     background-color: darkred;
     /* Cor de fundo mais escura quando passar o mouse */
@@ -523,38 +556,9 @@ h6 {
     /* Ajuste o tamanho conforme necessário */
 }
 
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    /* Aura clara ao redor do texto */
-    border-radius: 50%;
-    z-index: -1;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    /* Brilho suave */
-    animation: auraAnimation 2s infinite alternate;
-}
 
-@keyframes auraAnimation {
-    0% {
-        transform: scale(1);
-        opacity: 0.6;
-    }
 
-    100% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-}
+
 
 hr {
     border: none;
